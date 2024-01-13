@@ -3,35 +3,35 @@
 let pelicula//defino pelicula para que sea variable global
 
 do {//bucle para comprobar que pelicula tenga una cadena string 
-    pelicula = prompt("Qué pelicula viste?"); //pregunta al usuario por pelicula
+    pelicula = prompt("¿Cuál fue la última pelicula que viste?"); //pregunta al usuario por pelicula
 } while (pelicula === null || pelicula === "")
-let valorar = confirm("Querés valorar la pelicula " + pelicula + "?"); //pregunta al usuario si quiere hacer una valoracion
+let valorar = confirm("¿Te gustaría valorar " + '"' + pelicula + '"' + "?"); //pregunta al usuario si quiere hacer una valoracion
 let numero //defino numero para que sea variable global
 while (valorar) { //bucle while para que repita hasta que entre a un case y valorar se vuelva false
-    numero = parseInt(prompt("Cuántas estrellas le pones del 1 al 5?")) // variable numero parseado para que lo que ingrese 
+    numero = parseInt(prompt("¿Que puntuación le darías del 1 al 5? Siendo: \n 1 - Muy mala \n 2 - Mala \n 3 - Buena \n 4 - Muy buena \n  5 - Excelente")) // variable numero parseado para que lo que ingrese 
     switch (numero) {
         case 1:
-            alert("Le diste 1 estrella")
+            alert("Gracias, tu puntuación fue 1.")
             valorar = false
             break;
         case 2:
-            alert("le diste 2 estrellas")
+            alert("Gracias, tu puntuación fue 2.")
             valorar = false
             break;
         case 3:
-            alert("le diste 3 estrellas")
+            alert("Gracias, tu puntuación fue 3.")
             valorar = false
             break;
         case 4:
-            alert("le diste 4 estrellas")
+            alert("Gracias, tu puntuación fue 4.")
             valorar = false
             break;
         case 5:
-            alert("le diste 5 estrellas")
+            alert("Gracias, tu puntuación fue 5.")
             valorar = false
             break;
         default:
-            alert("Ingreso inválido, valorá del 1 al 5")
+            alert("Ingreso inválido, elegí del 1 al 5")
             break;
     }
 }
@@ -42,7 +42,7 @@ if (numero > 2) {
 }
 function recomendar(pelicula) {
 
-    let recomendarias = confirm("Querés recomendar " + pelicula + "a un amigo?")//pregunta si quiere recomendar
+    let recomendarias = confirm("¿Te gustaría recomendar " + '"' + pelicula + '"' + " a un amigo?")//pregunta si quiere recomendar
     if (recomendarias) {
         do {
             let nombreAmigo = prompt("Ingresá el nombre de tu amigo") //Pide nombre del amigo 
@@ -50,4 +50,4 @@ function recomendar(pelicula) {
         } while (nombreAmigo === null || nombreAmigo === "" || mailAmigo === null || mailAmigo === "")
     }
 }
-alert("Muchas gracias por tu tiempo!!!")
+alert("¡Muchas gracias por tu tiempo!")
